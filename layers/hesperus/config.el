@@ -10,21 +10,6 @@
 ;;; License: GPLv3
 
 
-;; ;; reset frame size
-;; (stella/reset-frame-size)
-;; ;; learn from liu233w
-;; (add-hook 'after-make-frame-functions 'stella/reset-frame-size)
-
-;; (unless (functionp 'stella/reset-frame-size)
-;;   (defun stella/reset-frame-size (&optional frame)
-;;     "reset frame size"
-;;     (interactive)
-;;     (when frame
-;;       (select-frame frame))
-;;     (set-frame-size (selected-frame) 96 48))
-;;   )
-
-
 ;; one-key switch theme via @ksqsf at emacs-china
 (defvar *my-dark-theme* 'zenburn)
 (defvar *my-light-theme* 'leuven)
@@ -51,16 +36,6 @@
 ;; (set-face-attribute 'font-lock-type-face nil :weight 'semi-bold :slant 'italic)
 ;; (set-face-attribute 'font-lock-comment-face nil :slant 'italic)
 ;; ;; (set-face-attribute 'font-lock-string-face nil :foreground '"forest green")
-
-
-;; ;; performance of opening large file
-;; (add-hook 'find-file-hook 'spacemacs/check-large-file)
-;; (defun spacemacs/check-large-file ()
-;;   (when (> (buffer-size) 500000)
-;;     (progn
-;;       (fundamental-mode)
-;;       (hl-line-mode -1)
-;;       )))
 
 
 ;; improve the performance of opening tex file
@@ -110,17 +85,8 @@
 ;; (add-hook 'yaml-mode-hook (lambda () (spacemacs/toggle-line-numbers-on)) 'append)
 
 
-;; ;; set default translate web as translate.google.cn
-;; (eval-after-load 'google-translate-core
-;;   '(setq google-translate-base-url "http://translate.google.cn/translate_a/single"
-;;          google-translate-listen-url "http://translate.google.cn/translate_tts"
-;;          google-translate-default-target-language "zh_CN"))
-;; (eval-after-load 'google-translate-tk
-;;   '(setq google-translate--tkk-url "http://translate.google.cn/"))
-
-
 ;; ;; pretty symbols via:
-;; ;; https://github.com/MetroWind/dotfiles-mac/blob/master/.emacs-pkgs/mw-unicode-symbols-subst.el
+;; ;; github.com/MetroWind/dotfiles-mac/blob/master/.emacs-pkgs/mw-unicode-symbols-subst.el
 ;;
 ;; (defvar have-prettify-symbols
 ;;   (not (version< emacs-version "24.4")))

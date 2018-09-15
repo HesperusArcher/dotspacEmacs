@@ -538,10 +538,6 @@ before packages are loaded."
   ;;   (spacemacs/switch-to-scratch-buffer))
   (kill-buffer "*spacemacs*")
 
-  ;; ;; to solve the problem "args out of range" when replace-regexp
-  ;; ;; github.com/syl20bnr/spacemacs/issues/10938
-  ;; (setq frame-title-format nil)
-
   ;; ;; manateelazycat/emacs-application-framework
   ;; (require 'eaf)
 
