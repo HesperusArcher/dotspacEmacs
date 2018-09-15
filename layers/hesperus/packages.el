@@ -37,11 +37,9 @@
     ;; company-english-helper
     ;; eaf
     fcitx
-    general
     ;; latex-preview-pane
     ;; org
     pangu-spacing
-    polymode
     ;; proxy-mode
     ;; pyim
     quickrun
@@ -115,10 +113,6 @@ Each entry is either:
     (setq fcitx-use-dbus t) ;; uncomment if you're using Linux
     ))
 
-(defun stella/init-general ()
-  (use-package general
-    ))
-
 ;; (defun stella/post-init-org ()
 ;;   (with-eval-after-load 'org
 ;;     (;; load-languages in org-mode
@@ -153,15 +147,6 @@ Each entry is either:
       :group 'pangu-spacing
       :type 'list)
     ))
-
-(defun hesperus/init-polymode ()
-  ;; ;; markdown
-  ;; (add-to-list 'auto-mode-alist '("\\.md" . poly-markdown-mode))
-  ;; ;; R modes
-  ;; (add-to-list 'auto-mode-alist '("\\.Snw" . poly-noweb+r-mode))
-  ;; (add-to-list 'auto-mode-alist '("\\.Rnw" . poly-noweb+r-mode))
-  (add-to-list 'auto-mode-alist '("\\.Rmd" . poly-markdown+r-mode))
-  )
 
 ;; (defun stella/init-proxy-mode ()
 ;;   (use-package proxy-mode

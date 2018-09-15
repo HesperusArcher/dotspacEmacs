@@ -454,8 +454,8 @@ It should only modify the values of Spacemacs settings."
    ;; %z - mnemonics of buffer, terminal, and keyboard coding systems
    ;; %Z - like %z, but including the end-of-line format
    ;; (default "%I@%S")
-   dotspacemacs-frame-title-format "%I@%S"
-   ;; dotspacemacs-frame-title-format "%a @ %m"
+   ;; dotspacemacs-frame-title-format "%I@%S"
+   dotspacemacs-frame-title-format "%a @ %m"
 
    ;; Format specification for setting the icon title format
    ;; (default nil - same as frame-title-format)
@@ -538,19 +538,9 @@ before packages are loaded."
   ;;   (spacemacs/switch-to-scratch-buffer))
   (kill-buffer "*spacemacs*")
 
-  ;; to solve the problem "args out of range" when replace-regexp
-  ;; github.com/syl20bnr/spacemacs/issues/10938
-  (setq frame-title-format nil)
-
-  ;; ;;display time in space-powerline
-  ;; (spaceline-define-segment date-and-time
-  ;;   (shell-command-to-string "echo -n $(date '+%a @%W/52 -*- %F(%j) -*- %H:%M%')"))
-  ;; (spaceline-spacemacs-theme 'date-and-time)
-
-  ;; ;; display time on vim-modeline
-  ;; (setq display-time-format "%H:%M")
-  ;; ;; (display-time-mode 1)
-  ;; (spacemacs/toggle-display-time-on)
+  ;; ;; to solve the problem "args out of range" when replace-regexp
+  ;; ;; github.com/syl20bnr/spacemacs/issues/10938
+  ;; (setq frame-title-format nil)
 
   ;; ;; manateelazycat/emacs-application-framework
   ;; (require 'eaf)
