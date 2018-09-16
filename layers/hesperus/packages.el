@@ -105,13 +105,9 @@ Each entry is either:
 ;;   )
 
 (defun hesperus/init-fcitx ()
-  ;; Make sure the following comes before `(fcitx-aggressive-setup)'
-  (setq fcitx-active-evil-states '(insert emacs hybrid)) ;; if you use hybrid mode
   (fcitx-aggressive-setup)
-  (fcitx-prefix-keys-add "M-m") ;; M-m is common in Spacemacs
-  (when (spacemacs/system-is-linux)
-    (setq fcitx-use-dbus t) ;; uncomment if you're using Linux
-    ))
+  (setq fcitx-use-dbus t)
+  (fcitx-prefix-keys-add "M-m" "C-x" "C-c" "C-h"))
 
 ;; (defun stella/post-init-org ()
 ;;   (with-eval-after-load 'org

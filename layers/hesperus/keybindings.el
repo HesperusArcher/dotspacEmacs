@@ -72,6 +72,7 @@
 
 ;; switch buffer
 (global-set-key (kbd "C-<tab>") 'spacemacs/alternate-buffer)
+(global-set-key (kbd "C-c <tab>") 'spacemacs/alternate-buffer)
 
 (global-set-key (kbd "C-=") 'indent-region)
 
