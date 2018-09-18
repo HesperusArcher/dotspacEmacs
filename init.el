@@ -569,7 +569,7 @@ before packages are loaded."
 
   ;; enable company globally
   (global-company-mode)
-  (setq company-minimum-prefix-length 3)
+  ;; (setq company-minimum-prefix-length 3)
 
   ;; ;; hungry-delete-mode on
   ;; (global-hungry-delete-mode t)
