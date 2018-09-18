@@ -533,6 +533,9 @@ configuration.
 Put your configuration code here, except for variables that should be set
 before packages are loaded."
 
+  ;; un-display frame-title
+  (set-frame-parameter (car (frame-list)) 'undecorated t)
+
   ;; disable spacemacs buffer and switch to scratch when startup
   ;; (when (string= "*scratch*" (buffer-name))
   ;;   (spacemacs/switch-to-scratch-buffer))
@@ -566,7 +569,7 @@ before packages are loaded."
 
   ;; enable company globally
   (global-company-mode)
-  (setq company-minimum-prefix-length 2)
+  (setq company-minimum-prefix-length 3)
 
   ;; ;; hungry-delete-mode on
   ;; (global-hungry-delete-mode t)
