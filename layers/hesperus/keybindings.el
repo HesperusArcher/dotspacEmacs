@@ -101,3 +101,4 @@
 (global-set-key (kbd "M-n") 'tabbar-forward-tab)
 ;; (global-set-key (kbd "<waiting>") 'tabbar-backward-tab-other-window)
 ;; (global-set-key (kbd "<waiting>") 'tabbar-forward-tab-other-window)
+(global-set-key (kbd "C-c K") 'tabbar-kill-all-buffers-in-current-group)
