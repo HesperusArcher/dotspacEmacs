@@ -551,6 +551,10 @@ before packages are loaded."
   ;; ;; submodule to manateelazycat/lazycat-emacs/site-lisp/extensions/aweshell/
   ;; (require 'aweshell)
 
+  ;; manateelazycat/awesome-tab
+  (require 'awesome-tab)
+  (tabbar-build-helm-source)
+
   ;; auto-save via manateelazycat/lazycat-emacs/site-lisp/extensions/lazycat/auto-save.el
   (require 'auto-save)
   (auto-save-enable)
