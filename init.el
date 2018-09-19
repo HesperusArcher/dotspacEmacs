@@ -40,7 +40,6 @@ This function should only modify configuration layer settings."
      ;; `M-m f e R' (Emacs style) to install them.
      ;; ----------------------------------------------------------------
      helm
-     ;; ivy
      auto-completion
      better-defaults
      ;; bibtex
@@ -197,7 +196,7 @@ It should only modify the values of Spacemacs settings."
    ;; directory. A string value must be a path to an image format supported
    ;; by your Emacs build.
    ;; If the value is nil then no banner is displayed. (default 'official)
-   dotspacemacs-startup-banner nil
+   dotspacemacs-startup-banner 'official
 
    ;; List of items to show in startup buffer or an association list of
    ;; the form `(list-type . list-size)`. If nil then it is disabled.
@@ -244,7 +243,6 @@ It should only modify the values of Spacemacs settings."
    ;; spaceline theme. Value can be a symbol or list with additional properties.
    ;; (default '(spacemacs :separator wave :separator-scale 1.5))
    dotspacemacs-mode-line-theme 'vanilla
-   ;; dotspacemacs-mode-line-theme '(spacemacs :separator wave :separator-scale 1.5)
 
    ;; If non-nil the cursor color matches the state color in GUI Emacs.
    ;; (default t)
@@ -396,8 +394,6 @@ It should only modify the values of Spacemacs settings."
    ;;   :size-limit-kb 1000)
    ;; (default nil)
    dotspacemacs-line-numbers nil
-   ;; dotspacemacs-line-numbers '(:relative t
-   ;;                             :size-limit-kb 1000)
 
    ;; Code folding method. Possible values are `evil' and `origami'.
    ;; (default 'evil)
@@ -455,7 +451,6 @@ It should only modify the values of Spacemacs settings."
    ;; %Z - like %z, but including the end-of-line format
    ;; (default "%I@%S")
    dotspacemacs-frame-title-format "%I@%S"
-   ;; dotspacemacs-frame-title-format "%a @ %m"
 
    ;; Format specification for setting the icon title format
    ;; (default nil - same as frame-title-format)
@@ -510,10 +505,8 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
   ;; hack for remove purpose mode
   (setq purpose-mode nil)
 
-  ;; path of auto-save.el
+  ;; path of auto-save.el & awesome-tab
   (add-to-list 'load-path (expand-file-name "~/.spacemacs.d/site-lisp"))
-  ;; path of aweshell
-  ;; (add-to-list 'load-path (expand-file-name "~/github/lazycat-aweshell"))
   ;; path of company-english-helper
   (add-to-list 'load-path (expand-file-name "~/nutstore/nutbk/company-english-helper"))
 
@@ -541,6 +534,10 @@ before packages are loaded."
   ;;   (spacemacs/switch-to-scratch-buffer))
   (kill-buffer "*spacemacs*")
 
+  ;; manateelazycat/awesome-tab
+  (require 'awesome-tab)
+  (tabbar-build-helm-source)
+
   ;; ;; manateelazycat/emacs-application-framework
   ;; (require 'eaf)
 
@@ -549,14 +546,6 @@ before packages are loaded."
   (dolist (charset '(kana han symbol cjk-misc bopomofo))
     (set-fontset-font (frame-parameter nil 'font)
                       charset (font-spec :family "Source Han Sans CN" :size 16)))
-
-  ;; ;; aweshell, extension to eshell via manateelazycat/aweshell
-  ;; ;; submodule to manateelazycat/lazycat-emacs/site-lisp/extensions/aweshell/
-  ;; (require 'aweshell)
-
-  ;; manateelazycat/awesome-tab
-  (require 'awesome-tab)
-  (tabbar-build-helm-source)
 
   ;; auto-save via manateelazycat/lazycat-emacs/site-lisp/extensions/lazycat/auto-save.el
   (require 'auto-save)
