@@ -30,65 +30,61 @@
 (fset 'TeX-macro-block
    (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item '([return 92 98 101 103 105 110 123 98 108 111 99 107 6 123 6 return return 92 101 110 100 123 98 108 111 99 107 134217756 16 tab] 0 "%d") arg)))
 
-;; bing-dict-brief
+;; Bing dictionary
 (global-set-key (kbd "C-c b") 'bing-dict-brief)
 
-;; describe-char and codepoint
+;; Describe-char and codepoint
 (global-set-key (kbd "C-c d") 'describe-char)
 
-;; find file in project
+;; Find file in project
 (global-set-key (kbd "C-c f") 'counsel-projectile-find-file)
 
-;; popup magit status
+;; popup maGit status
 (global-set-key (kbd "C-c g") 'magit-status)
 
-;; jump with avy-goto-char
+;; Jump with avy-goto-char
 (global-set-key (kbd "C-c j") 'avy-goto-char)
 
-;; use smartparens to delete brackets
+;; use Smartparens to delete brackets
 (global-set-key (kbd "C-c s") 'sp-unwrap-sexp)
 
-;; quickrun
+;; Quickrun
 (global-set-key (kbd "C-c q") 'quickrun)
 
-;; visualized undo-tree
+;; visualized Undo-tree
 (global-set-key (kbd "C-c u") 'undo-tree-visualize)
 
-;; toggle to write with company-english-helper or not
+;; toggle of Writting with company-english-helper
 (global-set-key (kbd "C-c w") 'toggle-company-english-helper)
 
-;; comment or uncomment line
-(global-set-key (kbd "C-c ;") 'spacemacs/comment-or-uncomment-lines)
-
 ;; start newline whether in brackets or not
+;; similar with the function of "o" in Vim
 (global-set-key (kbd "C-o") (lambda ()
                               (interactive)
                               (mwim-end-of-code-or-line)
                               (newline-and-indent)))
 
-;; replace search with swiper and replace
+;; search and replace with Swiper and Replace-regexp
 (global-set-key (kbd "C-r") 'query-replace-regexp)
 (global-set-key (kbd "C-s") 'swiper)
 
-;; switch buffer
-(global-set-key (kbd "C-<tab>") 'spacemacs/alternate-buffer)
-(global-set-key (kbd "C-c <tab>") 'spacemacs/alternate-buffer)
+;; comment or uncomment lines
+;; does NOT work before disable the Fcitx clipboard module
+(global-set-key (kbd "C-;") 'spacemacs/comment-or-uncomment-lines)
 
+;; similar with the function of "=" in vim
 (global-set-key (kbd "C-=") 'indent-region)
 
-;; ;; toggle-fullscreen-frame (maximized-frame-at-startup t in .spacemacs|init.el)
-;; (global-set-key (kbd "oF") 'spacemacs/toggle-fullscreen-frame)
-;; (global-set-key (kbd "oM") 'spacemacs/toggle-maximize-frame)
+;; switch buffer
+;; using "C-c" as prefix when "C-<tab>" binding to other function
+(global-set-key (kbd "C-<tab>") 'spacemacs/alternate-buffer)
+(global-set-key (kbd "C-c <tab>") 'spacemacs/alternate-buffer)
 
 ;; ;; ;; latex-preview-pane
 ;; ;; (global-set-key (kbd "oP") 'latex-preview-pane-mode)
 
 ;; ;; awesome shell via manateelazycat/aweshell
 ;; (evil-leader/set-key "'" 'aweshell-new)
-
-;; ;; remap C-n and C-p for next and previous candidate
-;; (define-key evil-insert-state-map (kbd "C-n") (lambda () (interactive) (company-complete-common-or-cycle 1)))
-;; (define-key evil-insert-state-map (kbd "C-p") (lambda () (interactive) (company-complete-common-or-cycle -1)))
 
 ;; change brackets using smartparens
 (global-set-key (kbd "M-[") 'sp-backward-slurp-sexp)
