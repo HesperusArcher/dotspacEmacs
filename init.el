@@ -94,7 +94,6 @@ This function should only modify configuration layer settings."
    dotspacemacs-excluded-packages '(
                                     all-the-icons
                                     doom-modeline
-                                    exec-path-from-shell
                                     google-translate
                                     magit-svn
                                     org-bullets

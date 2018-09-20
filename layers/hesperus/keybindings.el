@@ -16,14 +16,14 @@
 (global-set-key (kbd "C-c m o") 'org-mode)
 (global-set-key (kbd "C-c m p") 'python-mode)
 (global-set-key (kbd "C-c m r") 'R-mode)
-(global-set-key (kbd "C-c m R") 'rmd-mode)
+;; (global-set-key (kbd "C-c m R") 'rmd-mode)
 (global-set-key (kbd "C-c m t") 'tex-mode)
 (global-set-key (kbd "C-c m x") 'text-mode)
 (global-set-key (kbd "C-c m y") 'yaml-mode)
 
 ;; macros for LaTeX-mode
-(global-set-key (kbd "C-c t f") 'TeX-macro-frame)
-(global-set-key (kbd "C-c t b") 'TeX-macro-block)
+(global-set-key (kbd "C-c M f") 'TeX-macro-frame)
+(global-set-key (kbd "C-c M b") 'TeX-macro-block)
 
 (fset 'TeX-macro-frame
       (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item '([return 92 98 101 103 105 110 123 102 114 97 109 101 6 123 5 return 92 98 101 103 105 110 123 98 108 111 99 107 6 123 6 return return 92 101 110 100 123 98 108 111 99 107 6 return 92 101 110 100 123 102 114 97 109 101 134217756 16 16 tab] 0 "%d") arg)))
@@ -31,8 +31,8 @@
 (fset 'TeX-macro-block
    (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item '([return 92 98 101 103 105 110 123 98 108 111 99 107 6 123 6 return return 92 101 110 100 123 98 108 111 99 107 134217756 16 tab] 0 "%d") arg)))
 
-;; Bing dictionary
-(global-set-key (kbd "C-c b") 'bing-dict-brief)
+;; use helm-mini to switch Buffers
+(global-set-key (kbd "C-c b") 'lazy-helm/helm-mini)
 
 ;; Describe-char and codepoint
 (global-set-key (kbd "C-c d") 'describe-char)
@@ -48,6 +48,9 @@
 
 ;; use Smartparens to delete brackets
 (global-set-key (kbd "C-c s") 'sp-unwrap-sexp)
+
+;; use bing dict to Translate
+(global-set-key (kbd "C-c t") 'bing-dict-brief)
 
 ;; Quickrun
 (global-set-key (kbd "C-c q") 'quickrun)
