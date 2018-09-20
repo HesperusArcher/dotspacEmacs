@@ -18,6 +18,7 @@
 (global-set-key (kbd "C-c m r") 'R-mode)
 (global-set-key (kbd "C-c m R") 'rmd-mode)
 (global-set-key (kbd "C-c m t") 'tex-mode)
+(global-set-key (kbd "C-c m x") 'text-mode)
 (global-set-key (kbd "C-c m y") 'yaml-mode)
 
 ;; macros for LaTeX-mode
