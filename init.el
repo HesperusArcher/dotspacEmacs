@@ -535,7 +535,7 @@ before packages are loaded."
 
   ;; manateelazycat/awesome-tab
   (require 'awesome-tab)
-  (tabbar-build-helm-source)
+  (awesome-tab-build-helm-source)
 
   ;; ;; manateelazycat/emacs-application-framework
   ;; (require 'eaf)
