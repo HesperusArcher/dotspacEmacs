@@ -97,8 +97,8 @@
 ;; (kbd "M-}") 'sp-forward-barf-sexp
 
 ;; select tab with awesome-tab
-(global-set-key (kbd "M-n") 'tabbar-forward-tab)
-(global-set-key (kbd "M-p") 'tabbar-backward-tab)
+(global-set-key (kbd "M-n") 'awesome-tab-forward)
+(global-set-key (kbd "M-p") 'awesome-tab-backward)
 ;; (global-set-key (kbd "M-C-n") 'tabbar-forward-group)
 ;; (global-set-key (kbd "M-C-p") 'tabbar-backward-group)
-(global-set-key (kbd "C-x K") 'tabbar-kill-all-buffers-in-current-group)
+(global-set-key (kbd "C-x K") 'awesome-tab-kill-all-buffers-in-current-group)
