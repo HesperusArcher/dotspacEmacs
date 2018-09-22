@@ -72,6 +72,9 @@ This function should only modify configuration layer settings."
      (syntax-checking :variables
                       syntax-checking-enable-by-default nil)
      ;; version-control
+     (version-control :variables
+                      version-control-diff-tool 'diff-hl
+                      version-control-diff-side 'left)
      yaml
      hesperus
      )
