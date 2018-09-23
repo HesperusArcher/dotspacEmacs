@@ -72,9 +72,6 @@ This function should only modify configuration layer settings."
      (syntax-checking :variables
                       syntax-checking-enable-by-default nil)
      ;; version-control
-     (version-control :variables
-                      version-control-diff-tool 'diff-hl
-                      version-control-diff-side 'left)
      yaml
      hesperus
      )
@@ -536,10 +533,6 @@ before packages are loaded."
   ;;   (spacemacs/switch-to-scratch-buffer))
   (kill-buffer "*spacemacs*")
 
-  ;; manateelazycat/awesome-tab
-  (require 'awesome-tab)
-  (awesome-tab-build-helm-source)
-
   ;; ;; manateelazycat/emacs-application-framework
   ;; (require 'eaf)
 
@@ -549,11 +542,18 @@ before packages are loaded."
     (set-fontset-font (frame-parameter nil 'font)
                       charset (font-spec :family "Source Han Sans CN" :size 16)))
 
+  ;; manateelazycat/awesome-tab
+  (require 'awesome-tab)
+  (awesome-tab-build-helm-source)
+
   ;; auto-save via manateelazycat/lazycat-emacs/site-lisp/extensions/lazycat/auto-save.el
   (require 'auto-save)
   (auto-save-enable)
   (setq auto-save-slient t)
   (setq auto-save-delete-trailing-whitespace t)
+
+  ;; manateelazycat/insert-translated-name
+  (require 'insert-translated-name)
 
   ;; manateelazycat/lazycat-emacs/tree/master/site-lisp/extensions/english-helper
   (require 'company-english-helper)

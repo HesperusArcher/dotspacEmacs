@@ -35,6 +35,7 @@
     ;; beacon
     bing-dict
     ;; company-english-helper
+    diff-hl
     ;; eaf
     fcitx
     ;; latex-preview-pane
@@ -100,6 +101,11 @@ Each entry is either:
 
 ;; (defun stella/init-company-english-helper ()
 ;;   )
+
+;; highlight uncommitted changes
+(defun hesperus/init-diff-hl ()
+  (global-diff-hl-mode)
+  (add-hook 'magit-post-refresh-hook 'diff-hl-magit-post-refresh))
 
 ;; (defun stella/init-eaf ()
 ;;   )
