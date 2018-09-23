@@ -157,6 +157,16 @@ Each entry is either:
 ;;         (concat "\\`" (regexp-opt '("localhost" "127.0.0.1")) "\\'"))
 ;;   ))
 
+;; (defun hesperus/init-pyim ()
+;;   (require 'pyim)
+;;   (use-package pyim-wbdict
+;;     :ensure nil
+;;     :config (pyim-wbdict-gbk-enable))
+;;   (setq default-input-method "pyim")
+;;   (setq pyim-default-scheme 'wubi)
+;;   (global-set-key (kbd "C-\\") 'toggle-input-method)
+;;   )
+
 (defun hesperus/init-quickrun ()
   )
 
