@@ -37,7 +37,7 @@
     ;; company-english-helper
     diff-hl
     ;; eaf
-    fcitx
+    ;; fcitx
     ;; latex-preview-pane
     ;; org
     pangu-spacing
@@ -110,10 +110,10 @@ Each entry is either:
 ;; (defun stella/init-eaf ()
 ;;   )
 
-(defun hesperus/init-fcitx ()
-  (fcitx-aggressive-setup)
-  (setq fcitx-use-dbus t)
-  (fcitx-prefix-keys-add "M-m" "C-x" "C-c" "C-h"))
+;; (defun hesperus/init-fcitx ()
+;;   (fcitx-aggressive-setup)
+;;   (setq fcitx-use-dbus t)
+;;   (fcitx-prefix-keys-add "M-m" "C-x" "C-c" "C-h"))
 
 ;; (defun stella/post-init-org ()
 ;;   (with-eval-after-load 'org
