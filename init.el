@@ -83,9 +83,7 @@ This function should only modify configuration layer settings."
    ;; To use a local version of a package, use the `:location' property:
    ;; '(your-package :location "~/path/to/your-package/")
    ;; Also include the dependencies as they will not be resolved automatically.
-   dotspacemacs-additional-packages '(
-                                      ;; (eaf :location "~/github/emacs-application-framework/")
-                                      )
+   dotspacemacs-additional-packages '()
 
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
@@ -377,7 +375,7 @@ It should only modify the values of Spacemacs settings."
    ;; If non-nil smooth scrolling (native-scrolling) is enabled. Smooth
    ;; scrolling overrides the default behavior of Emacs which recenters point
    ;; when it reaches the top or bottom of the screen. (default t)
-   dotspacemacs-smooth-scrolling nil
+   dotspacemacs-smooth-scrolling t
 
    ;; Control line numbers activation.
    ;; If set to `t' or `relative' line numbers are turned on in all `prog-mode' and
@@ -491,18 +489,18 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
           ("org-cn"   . "https://elpa.zilongshanren.com/org/")
           ("gnu-cn"   . "https://elpa.zilongshanren.com/gnu/")))
 
-  ;; https://github.com/syl20bnr/spacemacs/issues/2705
-  ;; (setq tramp-mode nil)
-  (setq tramp-ssh-controlmaster-options
-        "-o ControlMaster=auto -o ControlPath='tramp.%%C' -o ControlPersist=no")
+  ;; ;; https://github.com/syl20bnr/spacemacs/issues/2705
+  ;; ;; (setq tramp-mode nil)
+  ;; (setq tramp-ssh-controlmaster-options
+  ;;       "-o ControlMaster=auto -o ControlPath='tramp.%%C' -o ControlPersist=no")
 
-  ;; ss proxy. But it will cause anacond-mode failed.
-  (setq socks-server '("Default server" "127.0.0.1" 1080 5))
-  (setq evil-shift-round nil)
-  (setq byte-compile-warnings '(not obsolete))
-  (setq warning-minimum-level :error)
-  ;; hack for remove purpose mode
-  (setq purpose-mode nil)
+  ;; ;; ss proxy. But it will cause anaconda-mode failed.
+  ;; (setq socks-server '("Default server" "127.0.0.1" 1080 5))
+  ;; (setq evil-shift-round nil)
+  ;; (setq byte-compile-warnings '(not obsolete))
+  ;; (setq warning-minimum-level :error)
+  ;; ;; hack for remove purpose mode
+  ;; (setq purpose-mode nil)
 
   ;; path of auto-save.el & awesome-tab
   (add-to-list 'load-path (expand-file-name "~/.spacemacs.d/site-lisp"))
@@ -532,9 +530,6 @@ before packages are loaded."
   ;; (when (string= "*scratch*" (buffer-name))
   ;;   (spacemacs/switch-to-scratch-buffer))
   (kill-buffer "*spacemacs*")
-
-  ;; ;; manateelazycat/emacs-application-framework
-  ;; (require 'eaf)
 
   ;; set Chinese fonts not using chinese layer, same to chinese-fonts-setup, cnfonts
   (set-frame-font "Source Code Pro")

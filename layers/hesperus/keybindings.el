@@ -45,7 +45,7 @@
 
 ;; Insert-translated-name
 (global-set-key (kbd "C-c i") 'insert-translated-name-insert)
-(global-set-key (kbd "C-c I") 'insert-translated-name-replace)
+(global-set-key (kbd "C-c I") 'insert-translated-name-insert-with-line)
 
 ;; Jump with avy-goto-char
 (global-set-key (kbd "C-c j") 'avy-goto-char)

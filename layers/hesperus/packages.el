@@ -99,16 +99,10 @@ Each entry is either:
     ;; (setq bing-dict-pronunciation-style 'uk)
     ))
 
-;; (defun stella/init-company-english-helper ()
-;;   )
-
 ;; highlight uncommitted changes
 (defun hesperus/init-diff-hl ()
   (global-diff-hl-mode)
   (add-hook 'magit-post-refresh-hook 'diff-hl-magit-post-refresh))
-
-;; (defun stella/init-eaf ()
-;;   )
 
 ;; (defun hesperus/init-fcitx ()
 ;;   (fcitx-aggressive-setup)
