@@ -539,6 +539,7 @@ before packages are loaded."
 
   ;; manateelazycat/awesome-tab
   (require 'awesome-tab)
+  (awesome-tab-mode t)
   (awesome-tab-build-helm-source)
 
   ;; auto-save via manateelazycat/lazycat-emacs/site-lisp/extensions/lazycat/auto-save.el
