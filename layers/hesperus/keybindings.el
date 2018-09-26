@@ -105,4 +105,4 @@
 (global-set-key (kbd "M-p") 'awesome-tab-backward)
 ;; (global-set-key (kbd "M-C-n") 'tabbar-forward-group)
 ;; (global-set-key (kbd "M-C-p") 'tabbar-backward-group)
-(global-set-key (kbd "C-x K") 'awesome-tab-kill-all-buffers-in-current-group)
+(global-set-key (kbd "C-x K") 'awesome-tab-kill-other-buffers-in-current-group)
