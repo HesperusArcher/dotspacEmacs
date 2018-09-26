@@ -92,6 +92,24 @@ This function should only modify configuration layer settings."
    dotspacemacs-excluded-packages '(
                                     all-the-icons
                                     doom-modeline
+                                    evil-anzu
+                                    evil-args
+                                    evil-cleverparens
+                                    evil-ediff
+                                    evil-escape
+                                    evil-exchange
+                                    evil-goggles
+                                    evil-lion
+                                    evil-magit
+                                    evil-matchit
+                                    evil-mc
+                                    evil-numbers
+                                    evil-org
+                                    evil-surround
+                                    evil-tutor
+                                    evil-unimpaired
+                                    evil-visual-mark-mode
+                                    evil-visualstar
                                     google-translate
                                     magit-svn
                                     org-bullets
