@@ -10,7 +10,7 @@
  '(company-quickhelp-color-background "#4F4F4F")
  '(company-quickhelp-color-foreground "#DCDCCC")
  '(custom-safe-themes
-   '("3f44e2d33b9deb2da947523e2169031d3707eec0426e78c7b8a646ef773a2077" default))
+   '("0c32e4f0789f567a560be625f239ee9ec651e524e46a4708eb4aba3b9cdc89c5" "3f44e2d33b9deb2da947523e2169031d3707eec0426e78c7b8a646ef773a2077" default))
  '(evil-want-Y-yank-to-eol nil)
  '(fci-rule-color "#383838")
  '(nrepl-message-colors
