@@ -496,16 +496,17 @@ See the header of this file for more information."
   (spacemacs/load-spacemacs-env))
 
 (defun dotspacemacs/user-init ()
+
   "Initialization for user code:
 This function is called immediately after `dotspacemacs/init', before layer
 configuration.
 It is mostly for variables that should be set before packages are loaded.
 If you are unsure, try setting them in `dotspacemacs/user-config' first."
 
-  (setq configuration-layer-elpa-archives
-        '(("melpa-cn" . "https://elpa.zilongshanren.com/melpa/")
-          ("org-cn"   . "https://elpa.zilongshanren.com/org/")
-          ("gnu-cn"   . "https://elpa.zilongshanren.com/gnu/")))
+  ;; (setq configuration-layer-elpa-archives
+  ;;       '(("melpa-cn" . "https://elpa.zilongshanren.com/melpa/")
+  ;;         ("org-cn"   . "https://elpa.zilongshanren.com/org/")
+  ;;         ("gnu-cn"   . "https://elpa.zilongshanren.com/gnu/")))
 
   ;; ;; https://github.com/syl20bnr/spacemacs/issues/2705
   ;; ;; (setq tramp-mode nil)
