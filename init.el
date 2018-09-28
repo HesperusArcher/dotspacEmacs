@@ -521,11 +521,6 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
   ;; ;; hack for remove purpose mode
   ;; (setq purpose-mode nil)
 
-  ;; path of auto-save.el & awesome-tab
-  (add-to-list 'load-path (expand-file-name "~/.spacemacs.d/site-lisp"))
-  ;; path of company-english-helper
-  (add-to-list 'load-path (expand-file-name "~/nutstore/nutbk/company-english-helper"))
-
   )
 
 (defun dotspacemacs/user-load ()
@@ -542,36 +537,14 @@ configuration.
 Put your configuration code here, except for variables that should be set
 before packages are loaded."
 
-  ;; un-display frame-title
-  (set-frame-parameter (car (frame-list)) 'undecorated t)
-
   ;; disable spacemacs buffer and switch to scratch when startup
   ;; (when (string= "*scratch*" (buffer-name))
   ;;   (spacemacs/switch-to-scratch-buffer))
   (kill-buffer "*spacemacs*")
 
-  ;; set Chinese fonts not using chinese layer, same to chinese-fonts-setup, cnfonts
-  (set-frame-font "Source Code Pro")
-  (dolist (charset '(kana han symbol cjk-misc bopomofo))
-    (set-fontset-font (frame-parameter nil 'font)
-                      charset (font-spec :family "Source Han Sans CN" :size 16)))
-
-  ;; manateelazycat/awesome-tab
-  (require 'awesome-tab)
-  (awesome-tab-mode t)
-  (awesome-tab-build-helm-source)
-
-  ;; auto-save via manateelazycat/lazycat-emacs/site-lisp/extensions/lazycat/auto-save.el
-  (require 'auto-save)
-  (auto-save-enable)
-  (setq auto-save-slient t)
-  (setq auto-save-delete-trailing-whitespace t)
-
-  ;; manateelazycat/insert-translated-name
-  (require 'insert-translated-name)
-
-  ;; manateelazycat/lazycat-emacs/tree/master/site-lisp/extensions/english-helper
-  (require 'company-english-helper)
+  ;; show vertical lines to guide indentation
+  (indent-guide-global-mode)
+  (set-face-background 'indent-guide-face "dimgray")
 
   ;; enable company globally
   (global-company-mode)

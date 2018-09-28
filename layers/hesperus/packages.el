@@ -38,7 +38,7 @@
     diff-hl
     ;; eaf
     ;; fcitx
-    highlight-indent-guides
+    ;; highlight-indent-guides
     ;; latex-preview-pane
     ;; org
     pangu-spacing
@@ -110,10 +110,10 @@ Each entry is either:
 ;;   (setq fcitx-use-dbus t)
 ;;   (fcitx-prefix-keys-add "M-m" "C-x" "C-c" "C-h"))
 
-(defun hesperus/init-highlight-indent-guides ()
-  (setq highlight-indent-guides-method 'character)
-  (add-hook 'prog-mode-hook 'highlight-indent-guides-mode)
-    )
+;; (defun hesperus/init-highlight-indent-guides ()
+;;   (setq highlight-indent-guides-method 'character)
+;;   (add-hook 'prog-mode-hook 'highlight-indent-guides-mode)
+;;     )
 
 ;; (defun stella/post-init-org ()
 ;;   (with-eval-after-load 'org
