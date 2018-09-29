@@ -21,16 +21,19 @@
 (global-set-key (kbd "C-c m x") 'text-mode)
 (global-set-key (kbd "C-c m y") 'yaml-mode)
 
-;; macrOs for LaTeX-mode
-(global-set-key (kbd "C-c o f") 'TeX-macro-frame)
-(global-set-key (kbd "C-c o b") 'TeX-macro-block)
 
+;; macrOs for LaTeX-mode
 (fset 'TeX-macro-frame
       (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item '([return 92 98 101 103 105 110 123 102 114 97 109 101 6 123 5 return 92 98 101 103 105 110 123 98 108 111 99 107 6 123 6 return return 92 101 110 100 123 98 108 111 99 107 6 return 92 101 110 100 123 102 114 97 109 101 134217756 16 16 tab] 0 "%d") arg)))
 
 (fset 'TeX-macro-block
    (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item '([return 92 98 101 103 105 110 123 98 108 111 99 107 6 123 6 return return 92 101 110 100 123 98 108 111 99 107 134217756 16 tab] 0 "%d") arg)))
 
+(global-set-key (kbd "C-c o f") 'TeX-macro-frame)
+(global-set-key (kbd "C-c o b") 'TeX-macro-block)
+
+
+;; keybindings with prefix "C-c"
 ;; use helm-mini to switch Buffers
 (global-set-key (kbd "C-c b") 'lazy-helm/helm-mini)
 
@@ -65,8 +68,28 @@
 ;; toggle of Writting with company-english-helper
 (global-set-key (kbd "C-c w") 'toggle-company-english-helper)
 
-;; start newline whether in brackets or not
+
+;; split window right/below
+;; via emacs-china.org/t/topic/945/2
+(defun hesperus-split-window-right ()
+  "Split window with another buffer."
+  (interactive)
+  (select-window (split-window-right))
+  (switch-to-buffer (other-buffer)))
+
+(defun hesperus-split-window-below ()
+  "Split window with another buffer."
+  (interactive)
+  (select-window (split-window-below))
+  (switch-to-buffer (other-buffer)))
+
+(global-set-key (kbd "C-x 3") 'hesperus-split-window-right)
+(global-set-key (kbd "C-x 2") 'hesperus-split-window-below)
+
+
+;; keybindings with prefix "C-"
 ;; similar with the function of "o" in Vim
+;; start newline whether in brackets or not
 (global-set-key (kbd "C-o") (lambda ()
                               (interactive)
                               (mwim-end-of-code-or-line)
@@ -78,18 +101,10 @@
 
 ;; comment or uncomment lines
 ;; does NOT work before disable the Fcitx clipboard module
-(global-set-key (kbd "C-;") 'spacemacs/comment-or-uncomment-lines)
+(global-set-key (kbd "C-;") 'comment-or-uncomment-region)
 
 ;; similar with the function of "=" in vim
 (global-set-key (kbd "C-=") 'indent-region)
-
-;; switch buffer
-;; using "C-c" as prefix when "C-<tab>" binding to other function
-(global-set-key (kbd "C-<tab>") 'spacemacs/alternate-buffer)
-(global-set-key (kbd "C-c <tab>") 'spacemacs/alternate-buffer)
-
-;; ;; ;; latex-preview-pane
-;; ;; (global-set-key (kbd "oP") 'latex-preview-pane-mode)
 
 ;; ;; awesome shell via manateelazycat/aweshell
 ;; (evil-leader/set-key "'" 'aweshell-new)
@@ -105,4 +120,4 @@
 (global-set-key (kbd "M-p") 'awesome-tab-backward)
 ;; (global-set-key (kbd "M-C-n") 'tabbar-forward-group)
 ;; (global-set-key (kbd "M-C-p") 'tabbar-backward-group)
-(global-set-key (kbd "C-x K") 'awesome-tab-kill-other-buffers-in-current-group)
+(global-set-key (kbd "C-x K") 'awesome-tab-kill-all-buffers-in-current-group)
