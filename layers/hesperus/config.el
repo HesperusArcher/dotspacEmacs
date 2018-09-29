@@ -10,27 +10,6 @@
 ;;; License: GPLv3
 
 
-;; one-key switch theme via @ksqsf at emacs-china
-(defvar *my-dark-theme* 'zenburn)
-(defvar *my-light-theme* 'leuven)
-(defvar *current-variant* 'dark)
-
-;; (load-theme 'spacemacs-light t)
-(global-set-key (kbd "<f8>") #'switch-theme-variant)
-
-(defun switch-theme-variant ()
-  (interactive)
-  (cond ((eq *current-variant* 'light)
-	       (disable-theme *my-light-theme*)
-	       (load-theme *my-dark-theme*)
-	       (setq *current-variant* 'dark))
-	      ((eq *current-variant* 'dark)
-	       (disable-theme *my-dark-theme*)
-	       (load-theme *my-light-theme*)
-	       (setq *current-variant* 'light))
-	      (t (error "unknown variant"))))
-
-
 ;; ;; set face-attribute font, disabling in default theme
 ;; (set-face-attribute 'font-lock-function-name-face nil :weight 'bold)
 ;; (set-face-attribute 'font-lock-type-face nil :weight 'semi-bold :slant 'italic)
