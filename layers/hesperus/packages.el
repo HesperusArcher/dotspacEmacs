@@ -115,6 +115,7 @@ Each entry is either:
 ;;   (add-hook 'prog-mode-hook 'highlight-indent-guides-mode)
 ;;     )
 
+;; ;; test function org-confirm-babel-evaluate also failed
 ;; (defun stella/post-init-org ()
 ;;   (with-eval-after-load 'org
 ;;     (;; load-languages in org-mode
