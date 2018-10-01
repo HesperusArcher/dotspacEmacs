@@ -237,17 +237,21 @@ It should only modify the values of Spacemacs settings."
    ;; with 2 themes variants, one dark and one light)
    dotspacemacs-themes '(
                          ;; spacemacs-dark
+                         ;; spacemacs-light
                          ;; solarized-light
                          ;; material-light
+                         material
                          ;; adwaita
                          ;; darktooth
                          ;; tango
                          zenburn
+                         doom-molokai
+                         doom-nord
+                         doom-one
                          sanityinc-tomorrow-eighties
                          dracula
                          tsdh-dark
                          leuven
-                         spacemacs-light
                          )
 
    ;; Set the theme for the Spaceline. Supported themes are `spacemacs',
