@@ -244,7 +244,6 @@ It should only modify the values of Spacemacs settings."
                          ;; adwaita
                          ;; darktooth
                          ;; tango
-                         dracula
                          sanityinc-tomorrow-eighties
                          zenburn
                          leuven

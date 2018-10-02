@@ -52,12 +52,12 @@
             ))
 
 
-;; improve the performance of opening python file
-(add-hook 'python-mode-hook
-          (lambda ()
-            ;; set conda's env path as default python interpreter
-            (setq python-shell-interpreter "/opt/anaconda/bin/python")
-            ))
+;; ;; improve the performance of opening python file
+;; (add-hook 'python-mode-hook
+;;           (lambda ()
+;;             ;; set conda's env path as default python interpreter
+;;             (setq python-shell-interpreter "/opt/anaconda/bin/ipython")
+;;             ))
 
 
 ;; ;; line-numbers for yaml-mode
