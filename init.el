@@ -239,16 +239,14 @@ It should only modify the values of Spacemacs settings."
                          ;; spacemacs-dark
                          ;; spacemacs-light
                          ;; solarized-light
-                         ;; material-light
                          material
+                         ;; material-light
                          ;; adwaita
                          ;; darktooth
                          ;; tango
-                         zenburn
-                         doom-molokai
-                         sanityinc-tomorrow-eighties
                          dracula
-                         tsdh-dark
+                         sanityinc-tomorrow-eighties
+                         zenburn
                          leuven
                          )
 
