@@ -246,8 +246,6 @@ It should only modify the values of Spacemacs settings."
                          ;; tango
                          zenburn
                          doom-molokai
-                         doom-nord
-                         doom-one
                          sanityinc-tomorrow-eighties
                          dracula
                          tsdh-dark
