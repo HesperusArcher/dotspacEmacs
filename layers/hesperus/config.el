@@ -17,53 +17,6 @@
 ;; ;; (set-face-attribute 'font-lock-string-face nil :foreground '"forest green")
 
 
-;; improve the performance of opening tex file
-(add-hook 'LaTeX-mode-hook
-          (lambda ()
-            (setq TeX-engine 'xetex
-                  TeX-show-compilation t
-                  )
-            (auto-fill-mode -1)
-            (setq truncate-lines nil)  ;; truncate lines ignore words
-            (set (make-local-variable 'pangu-spacing-real-insert-separtor) t)
-            ))
-
-
-;; improve the performance of opening markdown file
-(add-hook 'markdown-mode-hook
-          (lambda ()
-            ;; (auto-fill-mode)  ;; if column ==80 return
-            ;; (setq truncate-lines nil)  ;; truncate lines ignore words
-            ;; (visual-line-mode t)
-            (set (make-local-variable 'pangu-spacing-real-insert-separtor) t)
-            ;; (spacemacs/toggle-centered-point-on)
-            ))
-
-
-;; improve the performance of opening org file
-;; (add-hook 'org-mode-hook (lambda () (spacemacs/toggle-line-numbers-off)) 'append)
-(add-hook 'org-mode-hook
-          (lambda ()
-            ;; (auto-fill-mode)  ;; if column ==80 return
-            (setq truncate-lines nil)  ;; truncate lines ignore words
-            ;; (visual-line-mode t)
-            (set (make-local-variable 'pangu-spacing-real-insert-separtor) t)
-            ;; (spacemacs/toggle-centered-point-on)
-            ))
-
-
-;; ;; improve the performance of opening python file
-;; (add-hook 'python-mode-hook
-;;           (lambda ()
-;;             ;; set conda's env path as default python interpreter
-;;             (setq python-shell-interpreter "/opt/anaconda/bin/ipython")
-;;             ))
-
-
-;; ;; line-numbers for yaml-mode
-;; (add-hook 'yaml-mode-hook (lambda () (spacemacs/toggle-line-numbers-on)) 'append)
-
-
 ;; ;; pretty symbols via:
 ;; ;; github.com/MetroWind/dotfiles-mac/blob/master/.emacs-pkgs/mw-unicode-symbols-subst.el
 ;;
