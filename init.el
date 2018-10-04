@@ -552,9 +552,6 @@ before packages are loaded."
   ;; ;; hungry-delete-mode on
   ;; (global-hungry-delete-mode t)
 
-  ;; change default quoted char radix 8, alter option:10/16
-  (setq read-quoted-char-radix 16)
-
   ;; garbage-collection
   (when (eq system-type 'windows-nt)
     (setq gc-cons-threshold (* 512 1024 1024))
