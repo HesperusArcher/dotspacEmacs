@@ -58,7 +58,7 @@ This function should only modify configuration layer settings."
      perl5
      python
      ;; (python :variables
-             ;; python-backend 'anaconda)
+     ;;         python-backend 'anaconda)
      (shell :variables
             shell-default-shell 'ansi-term
             shell-default-position 'right
