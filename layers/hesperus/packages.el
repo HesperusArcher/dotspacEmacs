@@ -40,6 +40,7 @@
     ;; fcitx
     ;; highlight-indent-guides
     ;; latex-preview-pane
+    multiple-cursors
     ;; org
     pangu-spacing
     ;; proxy-mode
@@ -115,6 +116,16 @@ Each entry is either:
 ;;   (add-hook 'prog-mode-hook 'highlight-indent-guides-mode)
 ;;     )
 
+;; (defun stella/init-latex-preview-pane ()
+;;   (use-package latex-preview-pane
+;;     ))
+
+(defun hesperus/init-multiple-cursors ()
+  (global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
+  (global-set-key (kbd "C->") 'mc/mark-next-like-this)
+  (global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
+  (global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this))
+
 ;; ;; test function org-confirm-babel-evaluate also failed
 ;; (defun stella/post-init-org ()
 ;;   (with-eval-after-load 'org
@@ -133,10 +144,6 @@ Each entry is either:
 ;;        (perl . t)
 ;;        (C . t)
 ;;        ))
-;;     ))
-
-;; (defun stella/init-latex-preview-pane ()
-;;   (use-package latex-preview-pane
 ;;     ))
 
 (defun hesperus/init-pangu-spacing ()
