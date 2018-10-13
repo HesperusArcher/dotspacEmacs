@@ -38,7 +38,7 @@
     diff-hl
     ;; eaf
     ;; fcitx
-    ;; highlight-indent-guides
+    highlight-indent-guides
     ;; latex-preview-pane
     multiple-cursors
     ;; org
@@ -111,10 +111,16 @@ Each entry is either:
 ;;   (setq fcitx-use-dbus t)
 ;;   (fcitx-prefix-keys-add "M-m" "C-x" "C-c" "C-h"))
 
-;; (defun hesperus/init-highlight-indent-guides ()
-;;   (setq highlight-indent-guides-method 'character)
-;;   (add-hook 'prog-mode-hook 'highlight-indent-guides-mode)
-;;     )
+(defun hesperus/init-highlight-indent-guides ()
+  ;; Highlight indentions
+  (when (display-graphic-p)
+    (use-package highlight-indent-guides
+      :diminish
+      :hook (prog-mode . highlight-indent-guides-mode)
+      :config
+      (setq highlight-indent-guides-method 'character)
+      (setq highlight-indent-guides-responsive t)))
+    )
 
 ;; (defun stella/init-latex-preview-pane ()
 ;;   (use-package latex-preview-pane

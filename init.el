@@ -112,11 +112,11 @@ This function should only modify configuration layer settings."
                                     evil-visual-mark-mode
                                     evil-visualstar
                                     google-translate
+                                    indent-guide
                                     magit-svn
                                     org-bullets
                                     org-pomodoro
                                     powerline
-                                    rainbow-delimiters
                                     spaceline
                                     spaceline-all-the-icons
                                     )
@@ -238,8 +238,8 @@ It should only modify the values of Spacemacs settings."
    ;; with 2 themes variants, one dark and one light)
    dotspacemacs-themes '(;; dark-themes
                          ;; spacemacs-dark
+                         doom-tomorrow-night
                          material
-                         darktooth
                          sanityinc-tomorrow-eighties
                          zenburn
                          ;; light-themes
@@ -539,9 +539,9 @@ before packages are loaded."
   ;;   (spacemacs/switch-to-scratch-buffer))
   (kill-buffer "*spacemacs*")
 
-  ;; show vertical lines to guide indentation
-  (indent-guide-global-mode)
-  (set-face-background 'indent-guide-face "dimgray")
+  ;; ;; show vertical lines to guide indentation
+  ;; (indent-guide-global-mode)
+  ;; (set-face-background 'indent-guide-face "dimgray")
 
   ;; enable company globally
   (global-company-mode)
