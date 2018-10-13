@@ -51,7 +51,8 @@ This function should only modify configuration layer settings."
      (latex :variables
             latex-enable-auto-fill t
             latex-enable-folding t)
-     markdown
+     (markdown :variables
+               markdown-live-preview-engine 'vmd)
      neotree
      (org :variables
           org-enable-reveal-js-support t)
