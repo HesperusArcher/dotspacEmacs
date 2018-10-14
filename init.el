@@ -57,9 +57,9 @@ This function should only modify configuration layer settings."
      (org :variables
           org-enable-reveal-js-support t)
      perl5
-     python
-     ;; (python :variables
-     ;;         python-backend 'anaconda)
+     ;; python
+     (python :variables
+             python-backend 'anaconda)
      (shell :variables
             shell-default-shell 'ansi-term
             shell-default-position 'right

@@ -37,6 +37,7 @@
     ;; company-english-helper
     diff-hl
     ;; eaf
+    elpy
     ;; fcitx
     highlight-indent-guides
     ;; latex-preview-pane
@@ -105,6 +106,9 @@ Each entry is either:
 (defun hesperus/init-diff-hl ()
   (global-diff-hl-mode)
   (add-hook 'magit-post-refresh-hook 'diff-hl-magit-post-refresh))
+
+(defun hesperus/init-elpy ()
+  (elpy-enable))
 
 ;; (defun hesperus/init-fcitx ()
 ;;   (fcitx-aggressive-setup)
