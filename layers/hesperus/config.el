@@ -13,6 +13,13 @@
 
 
 ;;; --- add-hook ---
+
+;; improve prog-mode with rainbow-delimiters
+(add-hook 'prog-mode-hook
+          (lambda ()
+            (rainbow-delimiters-mode)
+            ))
+
 ;; improve the performance of opening tex file
 (add-hook 'LaTeX-mode-hook
           (lambda ()
@@ -48,7 +55,7 @@
 (add-hook 'python-mode-hook
           (lambda ()
             ;; set anaconda's ipython as default python interpreter
-            (setq python-shell-interpreter "~/anaconda3/bin/ipython")
+            (setq python-shell-interpreter "/opt/anaconda/bin/ipython")
             ))
 
 ;; ;; line-numbers for yaml-mode
