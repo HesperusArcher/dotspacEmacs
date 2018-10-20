@@ -239,8 +239,8 @@ It should only modify the values of Spacemacs settings."
    ;; with 2 themes variants, one dark and one light)
    dotspacemacs-themes '(;; dark-themes
                          ;; spacemacs-dark
-                         doom-dracula
                          material
+                         gruvbox
                          zenburn
                          sanityinc-tomorrow-eighties
                          ;; light-themes
