@@ -12,6 +12,15 @@
 ;;; Code:
 
 
+;; config for imenu-list to display current buffer's imenu entries
+(global-set-key (kbd "s-'") #'imenu-list-smart-toggle)
+(setq imenu-list-focus-after-activation t)
+(setq imenu-list-auto-resize t)
+(setq imenu-list-after-jump-hook nil)
+(add-hook 'imenu-list-after-jump-hook #'recenter-top-bottom)
+(setq imenu-list-position 'left)
+
+
 ;;; --- add-hook ---
 
 ;; improve prog-mode with rainbow-delimiters
