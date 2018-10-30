@@ -61,7 +61,7 @@ This function should only modify configuration layer settings."
      (python :variables
              python-backend 'anaconda)
      (shell :variables
-            shell-default-shell 'multi-term
+            shell-default-shell 'ansi-term
             shell-default-position 'right
             shell-default-width 40
             shell-default-term-shell "/usr/bin/zsh")
@@ -239,10 +239,11 @@ It should only modify the values of Spacemacs settings."
    ;; with 2 themes variants, one dark and one light)
    dotspacemacs-themes '(;; dark-themes
                          ;; spacemacs-dark
-                         material
+                         doom-molokai
+                         doom-dracula
                          gruvbox
-                         zenburn
                          sanityinc-tomorrow-eighties
+                         zenburn
                          ;; light-themes
                          spacemacs-light
                          leuven
