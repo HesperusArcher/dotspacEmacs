@@ -123,8 +123,8 @@ Each entry is either:
       :hook (prog-mode . highlight-indent-guides-mode)
       :config
       (setq highlight-indent-guides-method 'character)
-      (setq highlight-indent-guides-responsive t)))
-    )
+      (setq highlight-indent-guides-responsive t)
+      )))
 
 ;; (defun stella/init-latex-preview-pane ()
 ;;   (use-package latex-preview-pane
@@ -134,7 +134,8 @@ Each entry is either:
   (global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
   (global-set-key (kbd "C->") 'mc/mark-next-like-this)
   (global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
-  (global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this))
+  (global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
+  )
 
 ;; ;; test function org-confirm-babel-evaluate also failed
 ;; (defun stella/post-init-org ()

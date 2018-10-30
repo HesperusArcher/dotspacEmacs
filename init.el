@@ -61,7 +61,7 @@ This function should only modify configuration layer settings."
      (python :variables
              python-backend 'anaconda)
      (shell :variables
-            shell-default-shell 'ansi-term
+            shell-default-shell 'multi-term
             shell-default-position 'right
             shell-default-width 40
             shell-default-term-shell "/usr/bin/zsh")
