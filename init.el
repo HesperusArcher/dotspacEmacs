@@ -240,7 +240,6 @@ It should only modify the values of Spacemacs settings."
    dotspacemacs-themes '(;; dark-themes
                          ;; spacemacs-dark
                          monokai
-                         gruvbox
                          sanityinc-tomorrow-eighties
                          ;; zenburn
                          ;; light-themes
