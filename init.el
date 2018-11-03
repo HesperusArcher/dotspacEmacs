@@ -239,10 +239,12 @@ It should only modify the values of Spacemacs settings."
    ;; with 2 themes variants, one dark and one light)
    dotspacemacs-themes '(;; below--dark-themes
                          ;; spacemacs-dark
+                         monokai
                          sanityinc-tomorrow-eighties
                          ;; zenburn
                          ;; below--light-themes
                          spacemacs-light
+                         solarized-light
                          leuven
                          )
 
