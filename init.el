@@ -45,12 +45,11 @@ This function should only modify configuration layer settings."
      ;; bibtex
      csv
      emacs-lisp
-     (ess :variables
-          ess-enable-smart-equals t)
      git
      (latex :variables
             latex-enable-auto-fill t
             latex-enable-folding t)
+     lsp
      (markdown :variables
                markdown-live-preview-engine 'vmd)
      neotree
@@ -494,7 +493,6 @@ See the header of this file for more information."
   (spacemacs/load-spacemacs-env))
 
 (defun dotspacemacs/user-init ()
-
   "Initialization for user code:
 This function is called immediately after `dotspacemacs/init', before layer
 configuration.
