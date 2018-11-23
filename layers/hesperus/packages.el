@@ -33,7 +33,7 @@
   '(
     ace-pinyin
     ;; beacon
-    bing-dict
+    ;; bing-dict
     ;; company-english-helper
     diff-hl
     ;; eaf
@@ -47,6 +47,7 @@
     ;; proxy-mode
     ;; pyim
     quickrun
+    youdao-dictionary
     )
   "The list of Lisp packages required by the hesperus layer.
 
@@ -93,14 +94,14 @@ Each entry is either:
 ;;     (beacon-mode 1)
 ;;     (setq beacon-color "#666600")))
 
-;; bing-dict
-(defun hesperus/init-bing-dict ()
-  (use-package bing-dict
-    :defer t
-    :init
-    (setq bing-dict-show-thesaurus 'both)
-    ;; (setq bing-dict-pronunciation-style 'uk)
-    ))
+;; ;; bing-dict
+;; (defun hesperus/init-bing-dict ()
+;;   (use-package bing-dict
+;;     :defer t
+;;     :init
+;;     (setq bing-dict-show-thesaurus 'both)
+;;     ;; (setq bing-dict-pronunciation-style 'uk)
+;;     ))
 
 ;; highlight uncommitted changes
 (defun hesperus/init-diff-hl ()
@@ -187,6 +188,9 @@ Each entry is either:
 ;;   )
 
 (defun hesperus/init-quickrun ()
+  )
+
+(defun hesperus/init-youdao-dictionary ()
   )
 
 ;;; packages.el ends here
