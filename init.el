@@ -242,8 +242,9 @@ It should only modify the values of Spacemacs settings."
                          sanityinc-tomorrow-eighties
                          ;; zenburn
                          ;; below--light-themes
-                         spacemacs-light
-                         solarized-light
+                         ;; spacemacs-light
+                         ;; solarized-light
+                         doom-one-light
                          leuven
                          )
 
