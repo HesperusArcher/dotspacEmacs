@@ -245,7 +245,7 @@ It should only modify the values of Spacemacs settings."
                          ;; spacemacs-light
                          ;; solarized-light
                          doom-one-light
-                         leuven
+                         ;; leuven
                          )
 
    ;; Set the theme for the Spaceline. Supported themes are `spacemacs',
