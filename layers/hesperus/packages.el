@@ -132,10 +132,10 @@ Each entry is either:
 ;;     ))
 
 (defun hesperus/init-multiple-cursors ()
-  (global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
-  (global-set-key (kbd "C->") 'mc/mark-next-like-this)
-  (global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
-  (global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
+  (bind-key* "C-S-c C-S-c" 'mc/edit-lines)
+  (bind-key* "C->" 'mc/mark-next-like-this)
+  (bind-key* "C-<" 'mc/mark-previous-like-this)
+  (bind-key* "C-c C-<" 'mc/mark-all-like-this)
   )
 
 ;; ;; test function org-confirm-babel-evaluate also failed
