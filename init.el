@@ -59,11 +59,11 @@ This function should only modify configuration layer settings."
      ;; python
      (python :variables
              python-backend 'anaconda)
-     ;; (shell :variables
-     ;;        shell-default-shell 'ansi-term
-     ;;        shell-default-position 'right
-     ;;        shell-default-width 40
-     ;;        shell-default-term-shell "/usr/bin/zsh")
+     (shell :variables
+            shell-default-shell 'ansi-term
+            shell-default-position 'right
+            shell-default-width 40
+            shell-default-term-shell "/usr/bin/zsh")
      ;; spacemacs-completion
      (spell-checking :variables
                      ispell-program-name "aspell"
