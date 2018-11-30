@@ -95,4 +95,5 @@
  '(font-lock-function-name-face ((t (:bold t))))
  '(font-lock-keyword-face ((t (:bold t :italic t :foreground "#2caeae"))))
  '(font-lock-string-face ((t (:foreground "#fcefe8"))))
- '(font-lock-variable-name-face ((t (:bold t)))))
+ '(font-lock-variable-name-face ((t (:bold t))))
+ '(term ((t (:inherit default)))))

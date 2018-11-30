@@ -49,7 +49,7 @@ This function should only modify configuration layer settings."
      (latex :variables
             latex-enable-auto-fill t
             latex-enable-folding t)
-     lsp
+     ;; lsp
      (markdown :variables
                markdown-live-preview-engine 'vmd)
      neotree
@@ -58,12 +58,12 @@ This function should only modify configuration layer settings."
      perl5
      ;; python
      (python :variables
-             python-backend 'lsp)
-     (shell :variables
-            shell-default-shell 'ansi-term
-            shell-default-position 'right
-            shell-default-width 40
-            shell-default-term-shell "/usr/bin/zsh")
+             python-backend 'anaconda)
+     ;; (shell :variables
+     ;;        shell-default-shell 'ansi-term
+     ;;        shell-default-position 'right
+     ;;        shell-default-width 40
+     ;;        shell-default-term-shell "/usr/bin/zsh")
      ;; spacemacs-completion
      (spell-checking :variables
                      ispell-program-name "aspell"
