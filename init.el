@@ -46,6 +46,7 @@ This function should only modify configuration layer settings."
      csv
      emacs-lisp
      git
+     json
      (latex :variables
             latex-enable-auto-fill t
             latex-enable-folding t)
